@@ -23,10 +23,15 @@ public class Main {
 			int y = mPlayer.findScore(board,x);
 			board[preX].move(y, 2);
 			System.out.println(preX+" "+ y);
+			
+			if(board[preX].isWinerr()) {
+				board[preX].winStatus = true;
+			}
 			preX = y;
 			print(board);
 		}
 	}
+	
 	
 	static void print(MiniBoard[] board) {
 		
